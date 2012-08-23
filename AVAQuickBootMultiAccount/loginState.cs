@@ -143,6 +143,18 @@ namespace AVAQuickBootMultiAccount
 			if (listView1.SelectedItems.Count < 1) return;
 			System.Diagnostics.Process.Start(getUrlFromListViewSelectedItem());
 		}
+		
+		private void listView1_KeyDown(object sender, KeyEventArgs e)
+		{
+			switch (e.KeyCode)
+            		{
+				case Keys.Enter:
+				if (listView1.SelectedItems.Count < 1) return;
+				System.Diagnostics.Process.Start(getUrlFromListViewSelectedItem());
+				break;
+
+			}
+		}
 
 		private string getUrlFromListViewSelectedItem()
 		{
