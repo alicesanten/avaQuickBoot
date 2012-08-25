@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 using System.Diagnostics;
@@ -235,6 +235,14 @@ namespace AVAQuickBootMultiAccount
 		{
 			launchAva(sender, e);
 		}
+
+        private void listView1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == System.Windows.Forms.Keys.Enter)
+            {
+                launchAva(sender, e);
+            }
+        }
 
 	}
 }
